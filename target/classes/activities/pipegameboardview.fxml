@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane style="-fx-background-image: url('/tiles/wallpaper2.jpg');" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.PGBView">
+   <center>
+      <Canvas fx:id="canvas" height="429.0" onMouseClicked="#onClick" width="423.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="Connect">
+               <CustomMenuItem hideOnClick="false" text="Unspecified Action">
+                   <content>
+                       <TextField fx:id="ip" />
+                   </content>
+               </CustomMenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+               <CustomMenuItem hideOnClick="false" text="Unspecified Action">
+                   <content>
+                       <TextField fx:id="port" />
+                   </content>
+               </CustomMenuItem>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Game">
+               <MenuItem mnemonicParsing="false" onAction="#load" text="Load" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem mnemonicParsing="false" onAction="#solve" text="Solve" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="View">
+               <Menu mnemonicParsing="false" text="Stylesheets">
+                   <MenuItem mnemonicParsing="false" onAction="#changeStylesheets" text="Clear" />
+                   <MenuItem mnemonicParsing="false" onAction="#changeStylesheets" text="DarkTheme" />
+               </Menu>
+           </Menu>
+         <Menu mnemonicParsing="false" text="Steps">
+           <items>
+             <MenuItem mnemonicParsing="false">
+                  <graphic>
+                     <Label fx:id="Steps" textFill="#363232" />
+                  </graphic>
+               </MenuItem>
+           </items>
+         </Menu>
+       </MenuBar>
+   </top>
+</BorderPane>
