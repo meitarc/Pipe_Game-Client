@@ -41,7 +41,7 @@ public class Main extends Application {
         FXMLLoader fxl=new FXMLLoader();
         BorderPane root= fxl.load(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("activities/pipegameboardview.fxml")).openStream());
-        primaryStage.setTitle("PTM2");
+        primaryStage.setTitle("Pipe_Game");
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
